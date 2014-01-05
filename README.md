@@ -1,6 +1,6 @@
 # Tistory-Bootstrap3
 
-This is the bootstrap3 theme for Tistory. Tistory is a South Korean blog-publishing service that allows private or multi-user blogs. I made this theme because the built-in theme is not cool. I just need simple and Google's Adsense for wide screen. This theme is for my blog. But, if someone needs it Willing to be applied. Use it freely. And if you need a new function of this theme please contact me. Thanks.
+This is the bootstrap3 theme for Tistory. Tistory is a South Korean blog-publishing service that allows private or multi-user blogs. I made this theme because the built-in theme is not cool. I just need simple and Google's Adsense for wide screen. This theme is for my blog. But, if someone needs it willing to be applied. Use it freely. And if you need a new function of this theme please contact me. Thanks.
 
 ## Usage
 
