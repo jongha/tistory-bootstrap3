@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Keywords" content="[##_meta_http_equiv_keywords_##]" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+    <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_atom_url_##]" />
+    <link rel="stylesheet" href="http://www.beamp.net/wp-content/themes/wordpress-beamp/style.css" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//oss.maxcdn.com/libs/jquery-noty/2.0.3/jquery.noty.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" media="screen" type="text/css" href="./style.css" />
+    <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+    <title>[##_page_title_##] :: [##_title_##]</title>
+</head>
+
+<body>
+    <s_t3>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container contentsframe">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="[##_blog_link_##]">[##_title_##]</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="[##_taglog_link_##]">Tags</a>
+                        </li>
+                        <li><a href="[##_guestbook_link_##]">Guestbook</a>
+                        </li>
+                        <li><a href="[##_rss_url_##]">RSS</a>
+                        </li>
+                        <li><a href="[##_owner_url_##]">Admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mainBox" class="container">
+            <div id="main">
+                <div class="contents contentsframe">
+                    <s_list>
+                        <div class="searchList">
+                            <h2>article search result of '[##_list_conform_##]' : [##_list_count_##]</h2>
+                            <ol>
+                                <s_list_rep>
+                                    <li>
+                                        <span class="date">[##_list_rep_regdate_##]</span>
+                                        <a href="[##_list_rep_link_##]">[##_list_rep_title_##]</a>
+                                        <span class="cnt">[##_list_rep_rp_cnt_##]</span>
+                                    </li>
+                                </s_list_rep>
+                            </ol>
+                        </div>
+                    </s_list>
+                    <s_rplist>
+                        <div class="searchRplist">
+                            <h2>article search result of '[##_rplist_conform_##]' : [##_rplist_count_##]</h2>
+                            <ol>
+                                <s_rplist_rep>
+                                    <li>
+                                        <span class="date">[##_rplist_rep_regdate_##]</span>
+                                        <a href="[##_rplist_rep_link_##]">[##_rplist_rep_body_##]</a>
+                                        <span class="cnt">[##_rplist_rep_rp_cnt_##]</span>
+                                        <span class="name">[##_rplist_rep_name_##]</span>
+                                    </li>
+                                </s_rplist_rep>
+                            </ol>
+                        </div>
+                    </s_rplist>
+                    <s_local>
+                        <div class="localog">
+                            <h4>Location Log</h4>
+                            <s_local_spot_rep>
+                                <div class="spot" style="margin-left: [##_local_spot_depth_##]px">
+                                    [##_local_spot_##]
+                                </div>
+                            </s_local_spot_rep>
+                            <s_local_info_rep>
+                                <div class="info" style="margin-left: [##_local_info_depth_##]px">
+                                    <a href="[##_local_info_link_##]">[##_local_info_title_##]</a>
+                                </div>
+                            </s_local_info_rep>
+                        </div>
+                    </s_local>
+                    <s_tag>
+                        <div class="taglog">
+                            <h4>태그</h4>
+                            <ul>
+                                <s_tag_rep>
+                                    <li>
+                                        <a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a>
+                                    </li>
+                                </s_tag_rep>
+                            </ul>
+                        </div>
+                    </s_tag>
+                    <s_guest>
+                        <div class="guestbook" class="nonEntry">
+                            <h4>방명록</h4>
+                            <s_guest_input_form>
+                                <div class="guestWrite">
+                                    <s_guest_member>
+                                        <s_guest_form>
+                                            <p>
+                                                <input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" />
+                                                <span class="label">Name</span>
+
+                                            </p>
+                                            <p>
+                                                <input type="password" maxlength="8" name="[##_guest_input_password_##]" value="" />
+                                                <span class="label">Password</span>
+                                            </p>
+                                            <p>
+                                                <input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" class="homepage" />
+                                                <span class="label">Homepage</span>
+                                            </p>
+                                        </s_guest_form>
+                                    </s_guest_member>
+                                    <p>
+                                        <textarea name="[##_guest_textarea_body_##]" cols="55" rows="6"></textarea>
+                                    </p>
+                                    <p>
+                                        <input type="submit" value="Write" onclick="[##_guest_onclick_submit_##]" class="submit" />
+                                    </p>
+                                </div>
+                            </s_guest_input_form>
+                            <s_guest_container>
+                                <div class="guestList">
+                                    <ol>
+                                        <s_guest_rep>
+                                            <li id="[##_guest_rep_id_##]">
+                                                <div class="[##_guest_rep_class_##]">
+                                                    <span class="name">[##_guest_rep_name_##]</span>
+                                                    <span class="date"> [##_guest_rep_date_##]</span>
+                                                    <span class="control">
+												<a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">&nbsp;<span>Edit/Delete</span>
+                                                    </a>
+                                                    <a href="#" onclick="[##_guest_rep_onclick_reply_##]" class="write">&nbsp;<span>Write</span></a>
+                                                    </span>
+                                                    <p>[##_guest_rep_desc_##]</p>
+                                                </div>
+                                                <s_guest_reply_container>
+                                                    <ul>
+                                                        <s_guest_reply_rep>
+                                                            <li id="[##_guest_rep_id_##]">
+                                                                <div class="[##_guest_rep_class_##]">
+                                                                    <span class="name">[##_guest_rep_name_##]</span>
+                                                                    <span class="date"> [##_guest_rep_date_##]</span>
+                                                                    <span class="control">
+																<a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">&nbsp;<span>수정/삭제</span>
+                                                                    </a>
+                                                                    </span>
+                                                                    <p>[##_guest_rep_desc_##]</p>
+                                                                </div>
+                                                            </li>
+                                                        </s_guest_reply_rep>
+                                                    </ul>
+                                                </s_guest_reply_container>
+                                            </li>
+                                        </s_guest_rep>
+                                    </ol>
+                                </div>
+                            </s_guest_container>
+                        </div>
+                    </s_guest>
+                    <s_notice_rep>
+                        <div class="entryNotice">
+                            <h4><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h4>
+                            <div class="article">
+                                [##_notice_rep_desc_##]
+                            </div>
+                            <div class="info">
+                                <span class="date">[##_notice_rep_date_##]</span>
+                            </div>
+                        </div>
+                    </s_notice_rep>
+                    <s_article_protected>
+                        <div class="entryProtected">
+                            <h4><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h4>
+                            <p class="text">It is secure post.
+                                <br />Please type the password.</p>
+                            <p>
+                                <input id="[##_article_password_##]" name="[##_article_password_##]" type="password" maxlength="16" onkeydown="if (event.keyCode == 13) [##_article_dissolve_##]">
+                                <input type="button" class="submit" value="확인" onclick="[##_article_dissolve_##]" />
+                            </p>
+                            <div class="info">
+                                <span class="date">[##_article_rep_date_##]</span>
+                            </div>
+                        </div>
+                    </s_article_protected>
+                    <s_article_rep>
+                        <div class="entry">
+                            <div class="adsense_wide">
+                                <!-- adsense block -->
+                            </div>
+                            <h1>
+                                <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+                            </h1>
+                            <s_ad_div>
+                                <div class="admin">
+                                    <a href="[##_s_ad_m_link_##]">Edit</a> ,
+                                    <a href="#" onclick="[##_s_ad_m_onclick_##]">Edit(New Window)</a> , ([##_s_ad_s1_label_##])→
+                                    <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a> ,
+                                    <a href="#" onclick="[##_s_ad_t_onclick_##]">Trackback</a> ,
+                                    <a href="#" onclick="[##_s_ad_d_onclick_##]">Delete</a>
+                                </div>
+                            </s_ad_div>
+
+                            <div class="article">
+                                [##_article_rep_desc_##]
+                            </div>
+
+                            <div class="widgets">
+                                <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+                                <script type="text/javascript">
+                                    (function () {
+                                        var po = document.createElement('script');
+                                        po.type = 'text/javascript';
+                                        po.async = true;
+                                        po.src = 'https://apis.google.com/js/platform.js';
+                                        var s = document.getElementsByTagName('script')[0];
+                                        s.parentNode.insertBefore(po, s);
+                                    })();
+                                </script>
+                            </div>
+
+                            <div class="adsense_wide">
+                                <!-- adsense block -->
+                            </div>
+
+                            <div class="author">
+                                <span class="text">[##_article_rep_author_##]</span>
+                            </div>
+
+                            <s_tag_label>
+                                <div class="tagTrail">
+                                    <span class="tagText">tags : </span> [##_tag_label_rep_##]
+                                </div>
+                            </s_tag_label>
+                            <div class="info">
+                                <span class="category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a> </span>
+                                <span class="date">[##_article_rep_date_##]</span>
+                            </div>
+                            <div class="actionTrail">
+                                <a href="#tb" onclick="[##_article_rep_tb_link_##]">
+                                    <s_tb_count>Trackbacks : <span class="cnt">[##_article_rep_tb_cnt_##]</span>
+                                    </s_tb_count>
+                                </a>,
+                                <a href="#rp" onclick="[##_article_rep_rp_link_##]">
+                                    <s_rp_count>Comments : <span class="cnt">[##_article_rep_rp_cnt_##]</span>
+                                    </s_rp_count>
+                                </a>
+                            </div>
+
+                            <s_tb>
+                                <div class="trackback">
+                                    <div>Trackback Address : <span class="track_addr">[##_tb_address_##]</span></div>
+                                    <s_tb_container>
+                                        <ol>
+                                            <s_tb_rep>
+                                                <li id="[##_tb_rep_id_##]">
+                                                    <span class="track_title"><a href="[##_tb_rep_url_##]" onclick="window.open(this.href); return false" rel="external nofollow">[##_tb_rep_title_##]</a></span>
+                                                    <span class="from">tracked from <span class="name">[##_tb_rep_site_##]</span></span>
+                                                    <span class="date">[##_tb_rep_date_##]</span>
+                                                    <a href="#" onclick="[##_tb_rep_onclick_delete_##]; return false" class="delete">&nbsp;<span>Delete</span></a>
+                                                    <p>[##_tb_rep_desc_##]</p>
+                                                </li>
+                                            </s_tb_rep>
+                                        </ol>
+                                    </s_tb_container>
+                                </div>
+                            </s_tb>
+                            <s_rp>
+                                <div class="comment">
+                                    <div class="commentList">
+                                        <s_rp_container>
+                                            <ol>
+                                                <s_rp_rep>
+                                                    <li id="[##_rp_rep_id_##]">
+                                                        <div class="[##_rp_rep_class_##]">
+                                                            <span class="name">[##_rp_rep_name_##]</span>
+                                                            <span class="date"> [##_rp_rep_date_##]</span>
+                                                            <span class="control">
+                                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;<span>Edit/Delete</span></a>
+                                                            <a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">&nbsp;<span>Write</span></a>
+                                                            </span>
+                                                            <p>[##_rp_rep_desc_##]</p>
+                                                        </div>
+                                                        <s_rp2_container>
+                                                            <ul>
+                                                                <s_rp2_rep>
+                                                                    <li id="[##_rp_rep_id_##]">
+                                                                        <div class="[##_rp_rep_class_##]">
+                                                                            <span class="name">[##_rp_rep_name_##]</span>
+                                                                            <span class="date"> [##_rp_rep_date_##]</span>
+                                                                            <span class="control">
+                                                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;<span>Edit/Delete</span></a>
+                                                                            </span>
+                                                                            <p>[##_rp_rep_desc_##]</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </s_rp2_rep>
+                                                            </ul>
+                                                        </s_rp2_container>
+                                                    </li>
+                                                </s_rp_rep>
+                                            </ol>
+                                        </s_rp_container>
+                                    </div>
+                                    <s_rp_input_form>
+                                        <div class="commentWrite">
+                                            <s_rp_member>
+                                                <s_rp_guest>
+                                                    <p>
+                                                        <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" />
+                                                        <label for="name">Name</label>
+                                                    </p>
+                                                    <p>
+                                                        <input type="password" maxlength="8" name="[##_rp_input_password_##]" value="" />
+                                                        <label for="password">Password</label>
+                                                    </p>
+                                                    <p>
+                                                        <input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" />
+                                                        <label for="homepage">Homepage</label>
+                                                    </p>
+                                                </s_rp_guest>
+                                                <p class="secretWrap">
+                                                    <label for="secret">Secure</label>
+                                                    <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" />
+                                                </p>
+                                            </s_rp_member>
+                                            <p>
+                                                <textarea name="[##_rp_input_comment_##]" rows="10" cols="50"></textarea>
+                                            </p>
+                                            <p class="text-right">
+                                                <button type="button" onclick="[##_rp_onclick_submit_##]" class="btn btn-primary">Write</button>
+                                            </p>
+                                        </div>
+                                    </s_rp_input_form>
+                                </div>
+                            </s_rp>
+                        </div>
+                    </s_article_rep>
+                    <s_paging>
+                        <div class="paging">
+                            <a [##_prev_page_##] class="[##_no_more_prev_##]" id="prevPage">◀PREV</a>
+                            <span class="numbox">
+					<s_paging_rep>
+					<a [##_paging_rep_link_##] class="num"> [##_paging_rep_link_num_##]</a>
+					</s_paging_rep>
+				</span>
+                            <a [##_next_page_##] class="[##_no_more_next_##]" id="nextPage">NEXT▶</a>
+                        </div>
+                    </s_paging>
+                </div>
+                <div class="sidebar">
+                    <s_sidebar>
+                        <s_sidebar_element>
+                            <div class="blogImage">
+                                <img src="[##_image_##]" alt="[##_blogger_##]" />
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <s_rct_notice>
+                                <div class="notice">
+                                    <h3>Notice</h3>
+                                    <ul>
+                                        <s_rct_notice_rep>
+                                            <li><span class="dot">&raquo;</span><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a> 
+                                            </li>
+                                        </s_rct_notice_rep>
+                                    </ul>
+                                </div>
+                            </s_rct_notice>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="search">
+                                <s_search>
+                                    <h3>Search</h3>
+                                    <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" />
+                                    <input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit" />
+                                </s_search>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="authorList">
+                                <h3>Author</h3>
+                                <ul>
+                                    <s_author_rep>
+                                        <li>
+                                            <a href="[##_author_rep_link_##]">
+						                        [##_author_rep_name_##]
+						                    </a>
+                                        </li>
+                                    </s_author_rep>
+                                </ul>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="category">
+                                <h3>Category</h3>
+                                <div class="data">[##_category_##]</div>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="tagbox">
+                                <h3>Taglist</h3>
+                                <ul>
+                                    <s_random_tags>
+                                        <li> <a href="[##_tag_link_##]">[##_tag_name_##]</a> 
+                                        </li>
+                                    </s_random_tags>
+                                </ul>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="listBox">
+                                <h3>Recent Posts</h3>
+                                <ul>
+                                    <s_rctps_rep>
+                                        <li>
+                                            <span class="dot">&raquo;</span><a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+                                            <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
+                                        </li>
+                                    </s_rctps_rep>
+                                </ul>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="listBox">
+                                <h3>Recent Comments</h3>
+                                <ul>
+                                    <s_rctrp_rep>
+                                        <li>
+                                            <span class="dot">&raquo;</span>
+                                            <a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a>
+                                            <span class="date">[##_rctrp_rep_time_##]</span>
+                                        </li>
+                                    </s_rctrp_rep>
+                                </ul>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="listBox">
+                                <h3>Recent Trackbacks</h3>
+                                <ul>
+                                    <s_rcttb_rep>
+                                        <li>
+                                            <span class="dot">&raquo;</span>
+                                            <a href="[##_rcttb_rep_link_##]">[##_rcttb_rep_desc_##]</a>
+                                            <span class="date">[##_rcttb_rep_time_##]</span>
+                                        </li>
+                                    </s_rcttb_rep>
+                                </ul>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="listBox">
+                                <h3>Archive</h3>
+                                <ul>
+                                    <s_archive_rep>
+                                        <li>
+                                            <span class="dot">&raquo;</span>
+                                            <a href="[##_archive_rep_link_##]">[##_archive_rep_date_##]</a>
+                                            <span class="cnt">([##_archive_rep_count_##])</span>
+                                        </li>
+                                    </s_archive_rep>
+                                </ul>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="calendar">
+                                <h3>Calendar</h3>
+                                <div class="data">[##_calendar_##]</div>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="listBox">
+                                <h3>Links</h3>
+                                <ul>
+                                    <s_link_rep>
+                                        <li>
+                                            <span class="dot">&raquo;</span><a href="[##_link_url_##]" onclick="window.open(this.href); return false"> [##_link_site_##]</a>
+                                        </li>
+                                    </s_link_rep>
+                                </ul>
+                            </div>
+                        </s_sidebar_element>
+                        <s_sidebar_element>
+                            <div class="counter">
+                                <h3>Counter</h3>
+                                <ul>
+                                    <li>
+                                        Total : [##_count_total_##]
+                                    </li>
+                                    <li>
+                                        Today : [##_count_today_##]
+                                    </li>
+                                    <li>
+                                        Yesterday : [##_count_yesterday_##]
+                                    </li>
+                                </ul>
+                            </div>
+                        </s_sidebar_element>
+                    </s_sidebar>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container contentsframe text-center">
+                <p class="text-muted">Copyright (C) by [##_title_##]. All rights reserved.</p>
+            </div>
+        </div>
+    </s_t3> 
+</body>
+</html>
