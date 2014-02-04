@@ -35,14 +35,10 @@
         </div>
         <div class="collapse navbar-collapse navbar-left">
           <ul class="nav navbar-nav">
-            <li><a href="[##_taglog_link_##]">Tags</a>
-            </li>
-            <li><a href="[##_guestbook_link_##]">Guestbook</a>
-            </li>
-            <li><a href="[##_rss_url_##]">RSS</a>
-            </li>
-            <li><a href="[##_owner_url_##]">Admin</a>
-            </li>
+            <li><a href="[##_taglog_link_##]">Tags</a></li>
+            <li><a href="[##_guestbook_link_##]">Guestbook</a></li>
+            <li><a href="[##_rss_url_##]">RSS</a></li>
+            <li><a href="[##_owner_url_##]">Admin</a></li>
           </ul>
         </div>
         <div class="navbar-collapse collapse">
@@ -66,9 +62,9 @@
               <ol>
                 <s_list_rep>
                   <li>
-                    <span class="date">[##_list_rep_regdate_##]</span>
+                    <span>[##_list_rep_regdate_##]</span>
                     <a href="[##_list_rep_link_##]">[##_list_rep_title_##]</a>
-                    <span class="cnt">[##_list_rep_rp_cnt_##]</span>
+                    <span>[##_list_rep_rp_cnt_##]</span>
                   </li>
                 </s_list_rep>
               </ol>
@@ -80,10 +76,10 @@
               <ol>
                 <s_rplist_rep>
                   <li>
-                    <span class="date">[##_rplist_rep_regdate_##]</span>
+                    <span>[##_rplist_rep_regdate_##]</span>
                     <a href="[##_rplist_rep_link_##]">[##_rplist_rep_body_##]</a>
-                    <span class="cnt">[##_rplist_rep_rp_cnt_##]</span>
-                    <span class="name">[##_rplist_rep_name_##]</span>
+                    <span>[##_rplist_rep_rp_cnt_##]</span>
+                    <span>[##_rplist_rep_name_##]</span>
                   </li>
                 </s_rplist_rep>
               </ol>
@@ -154,7 +150,7 @@
                           <span class="name">[##_guest_rep_name_##]</span>
                           <span class="date"> [##_guest_rep_date_##]</span>
                           <span class="control">
-												<a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">&nbsp;<span>Edit/Delete</span>
+                        <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">&nbsp;<span>Edit/Delete</span>
                           </a>
                           <a href="#" onclick="[##_guest_rep_onclick_reply_##]" class="write">&nbsp;<span>Write</span></a>
                           </span>
@@ -168,7 +164,7 @@
                                   <span class="name">[##_guest_rep_name_##]</span>
                                   <span class="date"> [##_guest_rep_date_##]</span>
                                   <span class="control">
-																<a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">&nbsp;<span>수정/삭제</span>
+                                <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="modify">&nbsp;<span>수정/삭제</span>
                                   </a>
                                   </span>
                                   <p>[##_guest_rep_desc_##]</p>
@@ -187,65 +183,64 @@
           <s_notice_rep>
             <div>
               <div class="page-header"><h1><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h1></div>
-              <div>
-                [##_notice_rep_desc_##]
-              </div>
-              <div>
-                <span>[##_notice_rep_date_##]</span>
-              </div>
+              <div>[##_notice_rep_desc_##]</div>
+              <div>[##_notice_rep_date_##]</div>
             </div>
           </s_notice_rep>
           <s_article_protected>
             <div>
               <div class="page-header"><h1><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1></div>
-              <p>It is secure post.
-                <br />Please type the password.</p>
+              <p>
+                It is secure post.<br />Please type the password.
+              </p>
               <div class="form-group">
                 <input id="[##_article_password_##]" name="[##_article_password_##]" type="password" maxlength="16" onkeydown="if (event.keyCode == 13) [##_article_dissolve_##]" class="form-control">
                 <input type="button" class="submit" value="확인" onclick="[##_article_dissolve_##]" class="form-control" />
               </div>
-              <div class="info">
-                <span class="date">[##_article_rep_date_##]</span>
-              </div>
+              <div>[##_article_rep_date_##]</div>
             </div>
           </s_article_protected>
           <s_article_rep>
             <div>
-              <div class="page-header"><h1><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1></div>
-              <s_ad_div>
-                <div class="admin">
-                  <a href="[##_s_ad_m_link_##]">Edit</a> ,
-                  <a href="#" onclick="[##_s_ad_m_onclick_##]">Edit(New Window)</a> , ([##_s_ad_s1_label_##])→
-                  <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a> ,
-                  <a href="#" onclick="[##_s_ad_t_onclick_##]">Trackback</a> ,
-                  <a href="#" onclick="[##_s_ad_d_onclick_##]">Delete</a>
+              <div itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+              
+                <div class="page-header"><h1><a href="[##_article_rep_link_##]" itemprop="name">[##_article_rep_title_##]</a></h1></div>
+                <s_ad_div>
+                  <div class="admin">
+                    <a href="[##_s_ad_m_link_##]">Edit</a> ,
+                    <a href="#" onclick="[##_s_ad_m_onclick_##]">Edit(New Window)</a> , ([##_s_ad_s1_label_##])→
+                    <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a> ,
+                    <a href="#" onclick="[##_s_ad_t_onclick_##]">Trackback</a> ,
+                    <a href="#" onclick="[##_s_ad_d_onclick_##]">Delete</a>
+                  </div>
+                  
+                  <hr />
+                  
+                </s_ad_div>
+
+                <div itemprop="articleBody">
+                  [##_article_rep_desc_##]
                 </div>
-                
+
                 <hr />
-              </s_ad_div>
+                
+                <div>
+                  <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+                  <script type="text/javascript">
+                    (function () {
+                      var po = document.createElement('script');
+                      po.type = 'text/javascript';
+                      po.async = true;
+                      po.src = 'https://apis.google.com/js/platform.js';
+                      var s = document.getElementsByTagName('script')[0];
+                      s.parentNode.insertBefore(po, s);
+                    })();
+                  </script>
+                </div>
 
-              <div>
-                [##_article_rep_desc_##]
+                <hr />
+                
               </div>
-
-              <hr />
-              
-              <div>
-                <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-                <script type="text/javascript">
-                  (function () {
-                    var po = document.createElement('script');
-                    po.type = 'text/javascript';
-                    po.async = true;
-                    po.src = 'https://apis.google.com/js/platform.js';
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(po, s);
-                  })();
-                </script>
-              </div>
-
-              <hr />
-              
               <div class="clearfix"></div>
               
               <s_rp>
@@ -326,10 +321,10 @@
             <div class="text-center">
               <a [##_prev_page_##] class="[##_no_more_prev_##]" id="prevPage">◀PREV</a>
               <span>
-					      <s_paging_rep>
-					      <a [##_paging_rep_link_##] class="num"> [##_paging_rep_link_num_##]</a>
-					      </s_paging_rep>
-				      </span>
+                <s_paging_rep>
+                <a [##_paging_rep_link_##] class="num"> [##_paging_rep_link_num_##]</a>
+                </s_paging_rep>
+              </span>
               <a [##_next_page_##] class="[##_no_more_next_##]" id="nextPage">NEXT▶</a>
             </div>
           </s_paging>
