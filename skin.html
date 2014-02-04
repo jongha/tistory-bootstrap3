@@ -33,7 +33,7 @@
           </button>
           <a class="navbar-brand" href="[##_blog_link_##]">[##_title_##]</a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse navbar-left">
           <ul class="nav navbar-nav">
             <li><a href="[##_taglog_link_##]">Tags</a>
             </li>
@@ -45,14 +45,24 @@
             </li>
           </ul>
         </div>
+        <div class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+            <s_search>
+              <div class="form-group">
+                <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" class="form-control" placeholder="Search for" />
+              </div>
+              <button type="submit" class="btn btn-success" onclick="[##_search_onclick_submit_##]">Search</button>
+            </s_search>
+          </div>
+        </div>
       </div>
     </div>
     <div id="mainBox" class="container">
       <div id="main">
         <div class="contents contentsframe">
           <s_list>
-            <div class="searchList">
-              <h2>article search result of '[##_list_conform_##]' : [##_list_count_##]</h2>
+            <div>
+              <div class="page-header"><h1>Article search result of '[##_list_conform_##]' : [##_list_count_##]</h1></div>
               <ol>
                 <s_list_rep>
                   <li>
@@ -65,8 +75,8 @@
             </div>
           </s_list>
           <s_rplist>
-            <div class="searchRplist">
-              <h2>article search result of '[##_rplist_conform_##]' : [##_rplist_count_##]</h2>
+            <div>
+              <div class="page-header"><h1>Article search result of '[##_rplist_conform_##]' : [##_rplist_count_##]</h1></div>
               <ol>
                 <s_rplist_rep>
                   <li>
@@ -80,10 +90,10 @@
             </div>
           </s_rplist>
           <s_local>
-            <div class="localog">
-              <h4>Location Log</h4>
+            <div>
+              <div class="page-header"><h1>Location Log</h1></div>
               <s_local_spot_rep>
-                <div class="spot" style="margin-left: [##_local_spot_depth_##]px">
+                <div style="margin-left: [##_local_spot_depth_##]px">
                   [##_local_spot_##]
                 </div>
               </s_local_spot_rep>
@@ -95,9 +105,9 @@
             </div>
           </s_local>
           <s_tag>
-            <div class="taglog">
-              <h4>태그</h4>
-              <ul>
+            <div>
+              <div class="page-header"><h1>Tags</h1></div>
+              <ul class="list-inline text-justify">
                 <s_tag_rep>
                   <li>
                     <a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a>
@@ -107,36 +117,36 @@
             </div>
           </s_tag>
           <s_guest>
-            <div class="guestbook" class="nonEntry">
-              <h4>방명록</h4>
+            <div class="form-group">
+              <div class="page-header"><h1>Guestbook</h1></div>
               <s_guest_input_form>
-                <div class="guestWrite">
+                <div>
                   <s_guest_member>
                     <s_guest_form>
-                      <p>
-                        <input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" />
+                      <div class="form-group">
                         <span class="label">Name</span>
-                      </p>
-                      <p>
-                        <input type="password" maxlength="8" name="[##_guest_input_password_##]" value="" />
+                        <input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" class="form-control" />
+                      </div>
+                      <div class="form-group">
                         <span class="label">Password</span>
-                      </p>
-                      <p>
-                        <input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" class="homepage" />
+                        <input type="password" maxlength="8" name="[##_guest_input_password_##]" value="" class="form-control" />
+                      </div>
+                      <div class="form-group">
                         <span class="label">Homepage</span>
-                      </p>
+                        <input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" class="form-control" />
+                      </div>
                     </s_guest_form>
                   </s_guest_member>
-                  <p>
-                    <textarea name="[##_guest_textarea_body_##]" cols="55" rows="6"></textarea>
-                  </p>
-                  <p>
-                    <input type="submit" value="Write" onclick="[##_guest_onclick_submit_##]" class="submit" />
-                  </p>
+                  <div class="form-group">
+                    <textarea name="[##_guest_textarea_body_##]" cols="55" rows="6" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group text-right">
+                    <input type="submit" value="Write" onclick="[##_guest_onclick_submit_##]" class="btn btn-danger" />
+                  </div>
                 </div>
               </s_guest_input_form>
               <s_guest_container>
-                <div class="guestList">
+                <div>
                   <ol>
                     <s_guest_rep>
                       <li id="[##_guest_rep_id_##]">
@@ -175,37 +185,33 @@
             </div>
           </s_guest>
           <s_notice_rep>
-            <div class="entryNotice">
-              <h4><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h4>
-              <div class="article">
+            <div>
+              <div class="page-header"><h1><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h1></div>
+              <div>
                 [##_notice_rep_desc_##]
               </div>
-              <div class="info">
-                <span class="date">[##_notice_rep_date_##]</span>
+              <div>
+                <span>[##_notice_rep_date_##]</span>
               </div>
             </div>
           </s_notice_rep>
           <s_article_protected>
-            <div class="entryProtected">
-              <h4><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h4>
-              <p class="text">It is secure post.
+            <div>
+              <div class="page-header"><h1><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1></div>
+              <p>It is secure post.
                 <br />Please type the password.</p>
-              <p>
-                <input id="[##_article_password_##]" name="[##_article_password_##]" type="password" maxlength="16" onkeydown="if (event.keyCode == 13) [##_article_dissolve_##]">
-                <input type="button" class="submit" value="확인" onclick="[##_article_dissolve_##]" />
-              </p>
+              <div class="form-group">
+                <input id="[##_article_password_##]" name="[##_article_password_##]" type="password" maxlength="16" onkeydown="if (event.keyCode == 13) [##_article_dissolve_##]" class="form-control">
+                <input type="button" class="submit" value="확인" onclick="[##_article_dissolve_##]" class="form-control" />
+              </div>
               <div class="info">
                 <span class="date">[##_article_rep_date_##]</span>
               </div>
             </div>
           </s_article_protected>
           <s_article_rep>
-            <div class="entry">
-              <div class="adsense_wide">
-              </div>
-              <h1>
-                <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
-              </h1>
+            <div>
+              <div class="page-header"><h1><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1></div>
               <s_ad_div>
                 <div class="admin">
                   <a href="[##_s_ad_m_link_##]">Edit</a> ,
@@ -214,13 +220,17 @@
                   <a href="#" onclick="[##_s_ad_t_onclick_##]">Trackback</a> ,
                   <a href="#" onclick="[##_s_ad_d_onclick_##]">Delete</a>
                 </div>
+                
+                <hr />
               </s_ad_div>
 
-              <div class="article">
+              <div>
                 [##_article_rep_desc_##]
               </div>
 
-              <div class="widgets">
+              <hr />
+              
+              <div>
                 <div class="g-plusone" data-annotation="inline" data-width="300"></div>
                 <script type="text/javascript">
                   (function () {
@@ -234,54 +244,13 @@
                 </script>
               </div>
 
-              <div class="adsense_wide">
-              </div>
-
-              <div class="author">
-                <span class="text">[##_article_rep_author_##]</span>
-              </div>
-
-              <s_tag_label>
-                <div class="tagTrail">
-                  <span class="tagText">tags : </span> [##_tag_label_rep_##]
-                </div>
-              </s_tag_label>
-              <div class="info">
-                <span class="category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a> </span>
-                <span class="date">[##_article_rep_date_##]</span>
-              </div>
-              <div class="actionTrail">
-                <a href="#tb" onclick="[##_article_rep_tb_link_##]">
-                  <s_tb_count>Trackbacks : <span class="cnt">[##_article_rep_tb_cnt_##]</span>
-                  </s_tb_count>
-                </a>,
-                <a href="#rp" onclick="[##_article_rep_rp_link_##]">
-                  <s_rp_count>Comments : <span class="cnt">[##_article_rep_rp_cnt_##]</span>
-                  </s_rp_count>
-                </a>
-              </div>
-
-              <s_tb>
-                <div class="trackback">
-                  <div>Trackback Address : <span class="track_addr">[##_tb_address_##]</span></div>
-                  <s_tb_container>
-                    <ol>
-                      <s_tb_rep>
-                        <li id="[##_tb_rep_id_##]">
-                          <span class="track_title"><a href="[##_tb_rep_url_##]" onclick="window.open(this.href); return false" rel="external nofollow">[##_tb_rep_title_##]</a></span>
-                          <span class="from">tracked from <span class="name">[##_tb_rep_site_##]</span></span>
-                          <span class="date">[##_tb_rep_date_##]</span>
-                          <a href="#" onclick="[##_tb_rep_onclick_delete_##]; return false" class="delete">&nbsp;<span>Delete</span></a>
-                          <p>[##_tb_rep_desc_##]</p>
-                        </li>
-                      </s_tb_rep>
-                    </ol>
-                  </s_tb_container>
-                </div>
-              </s_tb>
+              <hr />
+              
+              <div class="clearfix"></div>
+              
               <s_rp>
-                <div class="comment">
-                  <div class="commentList">
+                <div class="form-group">
+                  <div>
                     <s_rp_container>
                       <ol>
                         <s_rp_rep>
@@ -312,214 +281,67 @@
                               </ul>
                             </s_rp2_container>
                           </li>
+                          
+                          <hr />
                         </s_rp_rep>
                       </ol>
                     </s_rp_container>
                   </div>
                   <s_rp_input_form>
-                    <div class="commentWrite">
+                    <div>
                       <s_rp_member>
                         <s_rp_guest>
-                          <p>
-                            <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" />
+                          <div class="form-group">
                             <label for="name">Name</label>
-                          </p>
-                          <p>
-                            <input type="password" maxlength="8" name="[##_rp_input_password_##]" value="" />
+                            <input type="text" class="form-control" name="[##_rp_input_name_##]" value="[##_guest_name_##]" />
+                          </div>
+                          <div class="form-group">
                             <label for="password">Password</label>
-                          </p>
-                          <p>
-                            <input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" />
+                            <input type="password" class="form-control" maxlength="8" name="[##_rp_input_password_##]" value="" />
+                          </div>
+                          <div class="form-group">
                             <label for="homepage">Homepage</label>
-                          </p>
+                            <input type="text" class="form-control" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" />
+                          </div>
                         </s_rp_guest>
-                        <p class="secretWrap">
+                        <div class="form-group">
                           <label for="secret">Secure</label>
                           <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" />
-                        </p>
+                        </div>
                       </s_rp_member>
-                      <p>
-                        <textarea name="[##_rp_input_comment_##]" rows="10" cols="50"></textarea>
-                      </p>
-                      <p class="text-right">
+                      <div class="form-group">
+                        <textarea class="form-control" name="[##_rp_input_comment_##]" rows="10" cols="50"></textarea>
+                      </div>
+                      <div class="form-group text-right">
                         <button type="button" onclick="[##_rp_onclick_submit_##]" class="btn btn-primary">Write</button>
-                      </p>
+                      </div>
                     </div>
                   </s_rp_input_form>
                 </div>
               </s_rp>
             </div>
           </s_article_rep>
+          
           <s_paging>
-            <div class="paging">
+            <div class="text-center">
               <a [##_prev_page_##] class="[##_no_more_prev_##]" id="prevPage">◀PREV</a>
-              <span class="numbox">
-					<s_paging_rep>
-					<a [##_paging_rep_link_##] class="num"> [##_paging_rep_link_num_##]</a>
-					</s_paging_rep>
-				</span>
+              <span>
+					      <s_paging_rep>
+					      <a [##_paging_rep_link_##] class="num"> [##_paging_rep_link_num_##]</a>
+					      </s_paging_rep>
+				      </span>
               <a [##_next_page_##] class="[##_no_more_next_##]" id="nextPage">NEXT▶</a>
             </div>
           </s_paging>
-        </div>
-        <div class="sidebar">
-          <s_sidebar>
-            <s_sidebar_element>
-              <div class="blogImage">
-                <img src="[##_image_##]" alt="[##_blogger_##]" />
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <s_rct_notice>
-                <div class="notice">
-                  <h3>Notice</h3>
-                  <ul>
-                    <s_rct_notice_rep>
-                      <li><span class="dot">&raquo;</span><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a> 
-                      </li>
-                    </s_rct_notice_rep>
-                  </ul>
-                </div>
-              </s_rct_notice>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="search">
-                <s_search>
-                  <h3>Search</h3>
-                  <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" />
-                  <input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit" />
-                </s_search>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="authorList">
-                <h3>Author</h3>
-                <ul>
-                  <s_author_rep>
-                    <li>
-                      <a href="[##_author_rep_link_##]">
-						            [##_author_rep_name_##]
-						          </a>
-                    </li>
-                  </s_author_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="category">
-                <h3>Category</h3>
-                <div class="data">[##_category_##]</div>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="tagbox">
-                <h3>Taglist</h3>
-                <ul>
-                  <s_random_tags>
-                    <li> <a href="[##_tag_link_##]">[##_tag_name_##]</a> 
-                    </li>
-                  </s_random_tags>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="listBox">
-                <h3>Recent Posts</h3>
-                <ul>
-                  <s_rctps_rep>
-                    <li>
-                      <span class="dot">&raquo;</span><a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
-                      <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
-                    </li>
-                  </s_rctps_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="listBox">
-                <h3>Recent Comments</h3>
-                <ul>
-                  <s_rctrp_rep>
-                    <li>
-                      <span class="dot">&raquo;</span>
-                      <a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a>
-                      <span class="date">[##_rctrp_rep_time_##]</span>
-                    </li>
-                  </s_rctrp_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="listBox">
-                <h3>Recent Trackbacks</h3>
-                <ul>
-                  <s_rcttb_rep>
-                    <li>
-                      <span class="dot">&raquo;</span>
-                      <a href="[##_rcttb_rep_link_##]">[##_rcttb_rep_desc_##]</a>
-                      <span class="date">[##_rcttb_rep_time_##]</span>
-                    </li>
-                  </s_rcttb_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="listBox">
-                <h3>Archive</h3>
-                <ul>
-                  <s_archive_rep>
-                    <li>
-                      <span class="dot">&raquo;</span>
-                      <a href="[##_archive_rep_link_##]">[##_archive_rep_date_##]</a>
-                      <span class="cnt">([##_archive_rep_count_##])</span>
-                    </li>
-                  </s_archive_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="calendar">
-                <h3>Calendar</h3>
-                <div class="data">[##_calendar_##]</div>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="listBox">
-                <h3>Links</h3>
-                <ul>
-                  <s_link_rep>
-                    <li>
-                      <span class="dot">&raquo;</span><a href="[##_link_url_##]" onclick="window.open(this.href); return false"> [##_link_site_##]</a>
-                    </li>
-                  </s_link_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <div class="counter">
-                <h3>Counter</h3>
-                <ul>
-                  <li>
-                    Total : [##_count_total_##]
-                  </li>
-                  <li>
-                    Today : [##_count_today_##]
-                  </li>
-                  <li>
-                    Yesterday : [##_count_yesterday_##]
-                  </li>
-                </ul>
-              </div>
-            </s_sidebar_element>
-          </s_sidebar>
+          
         </div>
       </div>
     </div>
     <div id="footer">
-      <div class="container contentsframe text-center">
+      <div class="container text-center">
         <p class="text-muted">Copyright (C) by [##_title_##]. All rights reserved.</p>
       </div>
     </div>
   </s_t3>
-a</body>
+</body>
 </html>
